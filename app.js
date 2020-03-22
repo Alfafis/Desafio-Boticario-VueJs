@@ -1,6 +1,5 @@
 window.onload = function () {
    vm.getJson();
-   forJson();
 }
 
 const vm = new Vue({

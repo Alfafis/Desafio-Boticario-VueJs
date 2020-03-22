@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16"
+      href="https://boticario.vteximg.com.br/arquivos/faviconn.png">
+   <title>Desafio Boticário</title>
+   <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li>Minha Loja</li>
+         <li>Perfumaria</li>
+         <li>Maquiagem</li>
+         <li>Cabelos</li>
+         <li>Infantil</li>
+      </ul>
+      <button type="button" title="Comprar" class="float" onclick="clearMarket()">
+         <i class="fas fa-shopping-cart"></i>
+         <span class="totalMarket"></span>
+      </button>
+   </nav>
+   <div class="conteudo">
+      <h3>Ultimos pedidos</h3>
+      <div class="grid" id="app">
+         <div v-for="action in actions" class="card" onclick="clickONCard()">
+            <div v-for="image in action.images" class="img-product">
+               <img v-bind:src="image.imageUrl" alt="">
+            </div>
+            <div class="title-product">
+               <label>{{action.name}}</label>
+            </div>
+            <div class="value-product">
+               <label>R$</label>
+               <span> {{action.Value}}</span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <footer>
+      <p id="p"></p>
+   </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./app.js"></script>
+
+</html>

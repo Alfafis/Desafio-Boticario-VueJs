@@ -27,7 +27,7 @@
    <div class="conteudo">
       <h3>Ultimos pedidos</h3>
       <div class="grid" id="app">
-         <div v-for="action in actions" class="card" onclick="clickONCard()">
+         <a href="#" v-for="action in actions" class="card" onclick="clickONCard(this)">
             <div v-for="image in action.images" class="img-product">
                <img v-bind:src="image.imageUrl" alt="">
             </div>
@@ -38,7 +38,7 @@
                <label>R$</label>
                <span> {{action.Value}}</span>
             </div>
-         </div>
+         </a>
       </div>
    </div>
 

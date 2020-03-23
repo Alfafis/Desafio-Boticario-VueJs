@@ -24,8 +24,10 @@ let precoTotal = 0;
 let iconMarket = document.querySelector(".float > i");
 let carrinho = document.querySelector(".totalMarket");
 
+
+
 const clickONCard = (e) => {
-   let clickCard = document.querySelector(".card > .value-product > span").innerText;
+   let clickCard = e.children[2].children[1].innerText;
    click++;
    precoTotal = clickCard * click;
    iconMarket.classList.remove("fa-shopping-cart");

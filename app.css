@@ -10,12 +10,18 @@
    body nav li:not(:nth-child(1)) {
       display: none;
    }
+
+   .conteudo .grid {
+      grid-gap: 50px;
+      grid-template-columns: 1fr 1fr;
+   }
+
 }
 
 html {
    width: 100vw;
    height: 100vh;
-   overflow-y: hidden;
+   overflow-x: hidden;
 }
 
 body {
@@ -89,6 +95,8 @@ nav button.float:hover {
 
 .conteudo h3 {
    text-align: center;
+   width: 300px;
+   margin: 20px auto;
 }
 
 .grid {
@@ -98,7 +106,9 @@ nav button.float:hover {
    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid .card {
+a.card {
+   text-decoration: none;
+   color: unset;
    display: grid;
    cursor: pointer;
    text-align: center;
